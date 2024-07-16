@@ -1,3 +1,7 @@
 spring:
   application:
     name: reactive
+  r2dbc:
+    url: r2dbc:h2:mem:///~/db/reactive-db
+    username: sa
+    password:
