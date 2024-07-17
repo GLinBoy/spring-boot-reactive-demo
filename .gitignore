@@ -36,8 +36,8 @@ out/
 ### VS Code ###
 .vscode/
 
-# Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos,java,gradle,intellij+all,eclipse,netbeans,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,macos,java,gradle,intellij+all,eclipse,netbeans,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/java,linux,macos,gradle,eclipse,windows,netbeans,intellij+all,visualstudiocode,maven
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,linux,macos,gradle,eclipse,windows,netbeans,intellij+all,visualstudiocode,maven
 
 ### Eclipse ###
 .metadata
@@ -267,6 +267,25 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse m2e generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
 ### NetBeans ###
 **/nbproject/private/
 **/nbproject/Makefile-*.mk
@@ -341,12 +360,10 @@ gradle-app.setting
 
 # Eclipse Gradle plugin generated files
 # Eclipse Core
-.project
 # JDT-specific (Eclipse Java Development Tools)
-.classpath
 
 ### Gradle Patch ###
 # Java heap dump
 *.hprof
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,java,gradle,intellij+all,eclipse,netbeans,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/java,linux,macos,gradle,eclipse,windows,netbeans,intellij+all,visualstudiocode,maven
