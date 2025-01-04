@@ -1,11 +1,13 @@
 package com.glinboy.sample.reactive.service.impl;
 
-import com.glinboy.sample.reactive.entity.Comment;
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
+
 import com.glinboy.sample.reactive.repository.CommentRepository;
 import com.glinboy.sample.reactive.service.CommentService;
-import lombok.AllArgsConstructor;
+import com.glinboy.sample.reactive.service.dto.CommentDTO;
+
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
 @Service
@@ -14,8 +16,11 @@ public class CommentServiceImpl implements CommentService {
 
     private final CommentRepository repository;
 
+    private ModelMapper mapper = new ModelMapper();
+
     @Override
-    public Flux<Comment> findAll() {
-        return repository.findAll();
+    public Flux<CommentDTO> findAll() {
+        return repository.findAll()
+                .map(c -> mapper.map(c, CommentDTO.class));
     }
 }
